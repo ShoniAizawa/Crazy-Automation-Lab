@@ -8,8 +8,40 @@ Ensure your phone is rooted and has a root app installed, such as Magisk, SuperS
 ---
 
 ## 🔗 Auto Tethering
+Open the Termux app, making sure it comes from F-Droid.
+First, we will create a shell file using nano, which we will fill with the auto tethering script.
+Copy and paste the following command:
+```
+nano ~/auto_tether.sh
+```
+Then fill in the file with the following commands:
+make sure it is in the following file `#!/data/data/com.termux/files/home/auto_tether.sh`
+```
+#!/data/data/com.termux/files/usr/bin/bash
+
+# Run As Root
+echo "=== AUTO TETHERING STARTED ===" > ~/tether.log
+
+last=""
+
+while true; do
+    state=$(cat /sys/class/android_usb/android0/state 2>/dev/null || echo "UNKNOWN")
+    
+    if [ "$state" = "CONFIGURED" ] && [ "$last" != "CONFIGURED" ]; then
+        echo "[$(date)] USB PC DETECTED → TETHERING ON" >> ~/tether.log
+        service call connectivity 33 i32 1
+        settings put global tether_dun_required 0
+        svc usb setFunctions rndis
+        ip link set rndis0 up 2>/dev/null || true
+    elif [ "$state" != "CONFIGURED" ] && [ "$last" = "CONFIGURED" ]; then
+        echo "[$(date)] USB LEPAS → TETHERING OFF" >> ~/tether.log
+        service call connectivity 33 i32 0
+        svc usb setFunctions none
+    fi
+    
+    last="$state"
+    sleep 2
+done
+```
 
 
-```
- 
-```
