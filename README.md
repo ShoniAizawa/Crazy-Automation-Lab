@@ -11,5 +11,5 @@ Ensure your phone is rooted and has a root app installed, such as Magisk, SuperS
 
 
 ```
-
+ 
 ```
