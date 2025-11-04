@@ -17,8 +17,6 @@ nano ~/auto_tether.sh
 Then fill in the file with the following commands:
 make sure it is in the following file `#!/data/data/com.termux/files/home/auto_tether.sh`
 ```
-#!/data/data/com.termux/files/usr/bin/bash
-
 # Run As Root
 echo "=== AUTO TETHERING STARTED ===" > ~/tether.log
 
