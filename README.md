@@ -10,17 +10,19 @@ Ensure your phone is rooted and has a root app installed, such as Magisk, SuperS
 ## 🔗 Auto Tethering
 Open the Termux app, making sure it comes from F-Droid.
 First, we will create a shell file using nano, which we will fill with the auto tethering script.
-Copy and paste the following command:
+
+1. Copy and paste the following command:
 ```
 nano ~/auto_tether.sh
 ```
-Then fill in the file with the following commands:
+2. Then fill in the file with the following commands:
 make sure it is in the following file `#!/data/data/com.termux/files/home/auto_tether.sh`
 ```
 # Run As Root
-echo "=== AUTO TETHERING STARTED ===" > ~/tether.log
+su -c '
+echo "Auto Tethering: Monitoring USB..." > /data/data/com.termux/files/home/tether.log
 
-last=""
+last_state=""
 
 while true; do
     state=$(cat /sys/class/android_usb/android0/state 2>/dev/null || echo "UNKNOWN")
@@ -37,9 +39,16 @@ while true; do
         svc usb setFunctions none
     fi
     
-    last="$state"
+    last_state="$state"
     sleep 2
 done
+```
+Then save it, press Ctrl + X, then press y to save, then press Enter. This is done in Termux.
+You have enabled the automatic tethering feature when connecting to a PC/laptop/STB-OpenWRT device.
+
+3.
+```
+chmod +x ~/auto_tether.sh
 ```
 
 
