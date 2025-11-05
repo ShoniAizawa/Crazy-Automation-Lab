@@ -5,12 +5,12 @@ Search and use according to your needs.
 
 # Auto Tethering
 
-> tether nyala otomatis saat colok ke usb. Jalan saat boot!
+> The tethering feature will activate automatically when connected to USB. The script will run when the phone is turned on!
 
-## Fitur
-- Cek otomatis tiap 3 menit
-- Jalan saat HP nyala (via Magisk service)
-- Log lengkap
+## Features
+- Automatic check every 3 minutes
+- Runs when the phone is on (via Magisk service)
+- Log Complete
 
 ## Install
 ```bash
