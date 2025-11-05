@@ -3,7 +3,7 @@
 This repository contains a collection of automation scripts to turn your phone into a modem or for other automation needs.
 Search and use according to your needs.
 
-# Auto Tethering
+# Auto Tethering USB
 
 > The tethering feature will activate automatically when connected to USB. The script will run when the phone is turned on!
 
@@ -19,5 +19,7 @@ curl -L https://raw.githubusercontent.com/ShoniAizawa/Crazy-Automation-Lab/main/
 
 ---
 
-# SELESAI!  
+# Auto Tethering Hotspot
+
+> Hotspot akan menyala otomatis jika usb tethering terdeteksi tidak terhubung
 
