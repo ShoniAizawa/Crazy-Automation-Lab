@@ -1,17 +1,17 @@
+#Enter su
 su
 
 # Hapus file lama kalau ada
 rm -f /data/adb/service.d/auto_tether_boot.sh
 
-# Buat file baru pakai echo
+#Create a new file using the echo command
 cat > /data/adb/service.d/auto_tether_boot.sh << 'EOF'
 #!/system/bin/sh
-# Auto start tethering setelah boot dari mati
 
-sleep 20
+sleep 40
 termux-wake-lock
 nohup sh /data/data/com.termux/files/home/auto_tether.sh > /data/data/com.termux/files/home/tether.log 2>&1 &
 EOF
 
+#Grant permission 
 chmod 755 /data/adb/service.d/auto_tether_boot.sh
-
