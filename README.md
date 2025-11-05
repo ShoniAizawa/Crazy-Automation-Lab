@@ -7,7 +7,7 @@ Search and use according to your needs.
 
 > The tethering feature will activate automatically when connected to USB. The script will run when the phone is turned on!
 
-## Features
+## 🌟 Features
 - Automatic check every 3 minutes
 - Runs when the phone is on (via Magisk service)
 - Log Complete
