@@ -19,26 +19,5 @@ curl -L https://raw.githubusercontent.com/ShoniAizawa/Crazy-Automation-Lab/main/
 
 ---
 
-## SELESAI!  
-Sekarang:
+# SELESAI!  
 
-- `auto_start.sh` **ada di repo**
-- `install.sh` **download & jalankan otomatis**
-- User dapat **kode persis sama**
-- Automation jalan **saat boot**
-
----
-
-## Mau Aku Bantu Langsung?
-
-**Balas aja:**
-> "Bantu bikin `auto_start.sh` + `install.sh` + update README!"
-
-Aku kasih **3 file siap copy-paste** + **link langsung ke GitHub edit page**.
-
-Atau langsung **buka ini**:
-→ [https://github.com/ShoniAizawa/Crazy-Automation-Lab/new/main/auto-tethering](https://github.com/ShoniAizawa/Crazy-Automation-Lab/new/main/auto-tethering)
-
-Pilih `auto_start.sh` → paste kode di atas → **Commit**!
-
-**Sekarang waktunya: `auto_start.sh` → jalan saat boot!**
