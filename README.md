@@ -5,7 +5,7 @@ Search and use according to your needs.
 
 # Auto Tethering
 
-> WiFi mati → tether nyala otomatis. Jalan saat boot!
+> tether nyala otomatis saat colok ke usb. Jalan saat boot!
 
 ## Fitur
 - Cek otomatis tiap 3 menit
